@@ -44,13 +44,14 @@ export class Vehiculos extends Component {
                     <tbody>
                         {vehics.map(vehi =>
                             <tr key={vehi.idVehiculo}>
+                                <td>{vehi.idVehiculo}</td>
                                 <td>{vehi.idPiloto}</td>
                                 <td>{vehi.capacidadMetrosCubicos}</td>
                                 <td>{vehi.consumoCombustibleKm}</td>
                                 <td>{vehi.tipoCarga}</td>
                                 <td>{vehi.costosDepreciacionQuetzales}</td>
-                                <td>{vehi.disponible}</td>
-                                <td>{vehi.fechaDiponible}</td>
+                                <td>{vehi.disponible ? "Si" : "No"}</td>
+                                <td>{vehi.fechaDisponible}</td>
                             </tr>)}
                     </tbody>
                 </Table>
